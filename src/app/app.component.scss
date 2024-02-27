@@ -5,3 +5,40 @@
 .text-gastronomy {
     color: #384B9C;
 }
+
+.bg-img-gastronomy {
+    background-image: url('../assets/gastronomia.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-holidays {
+    background-color: #FF6500;
+}
+
+.text-holidays {
+    color: #FF6500;
+}
+
+.bg-img-holidays {
+    background-image: url('../assets/festividades.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-activities {
+    background-color: #228D25;
+}
+
+.text-activities {
+    color: #228D25;
+}
+
+.bg-img-activities {
+    background-image: url('../assets/actividades.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

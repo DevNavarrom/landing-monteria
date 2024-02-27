@@ -46,35 +46,68 @@
 
     <div class="col-md-5">
       <div class="row h-50 vh-50 min-vh-50">
-        <div class="col-6 bg-gastronomy">
+        <div 
+          class="col-6"
+          [ngClass]="{
+            'bg-gastronomy': item === 'gastronomy',
+            'bg-holidays': item === 'holidays',
+            'bg-activities': item === 'activities'
+          }"
+        >
           <div id="carouselExampleIndicators" class="carousel slide h-100">
             <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" (click)="onClickItem('gastronomy')" [ngClass]="{'active': item === 'gastronomy'}" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" (click)="onClickItem('holidays')" [ngClass]="{'active': item === 'holidays'}" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" (click)="onClickItem('activities')" [ngClass]="{'active': item === 'activities'}" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
             <div class="carousel-inner">
-              <div class="carousel-item active">
+              <div 
+                class="carousel-item"
+                [ngClass]="{'active': item === 'gastronomy'}"
+              >
                 <h5 class="card-title text-white fw-bold fs-1 mt-5 mb-2">Gastronomía</h5>
-                  <ul>
-                    <li class="text-white text-start">Mote de queso</li>
-                    <li class="text-white text-start">Carne de res</li>
-                    <li class="text-white text-start">Rosquitas</li>
-                    <li class="text-white text-start">Chicharron</li>
-                    <li class="text-white text-start">Suero</li>
-                    <li class="text-white text-start">Cabeza e' gato</li>
-                  </ul>
+                <ul>
+                  <li class="text-white text-start">Mote de queso</li>
+                  <li class="text-white text-start">Carne de res</li>
+                  <li class="text-white text-start">Rosquitas</li>
+                  <li class="text-white text-start">Chicharrón</li>
+                  <li class="text-white text-start">Suero</li>
+                  <li class="text-white text-start">Cabeza e' gato</li>
+                </ul>
               </div>
-              <div class="carousel-item">
-                <p>Item 2</p>
+              <div 
+                class="carousel-item"
+                [ngClass]="{'active': item === 'holidays'}"
+              >
+                <h5 class="card-title text-white fw-bold fs-1 mt-5 mb-2">Festividades</h5>
+                <ul>
+                  <li class="text-white text-start">Feria de la Ganadería</li>
+                  <li class="text-white text-start">Fiesta del Rio</li>
+                </ul>
               </div>
-              <div class="carousel-item">
-                <p>Item 3</p>
+              <div 
+                class="carousel-item"
+                [ngClass]="{'active': item === 'activities'}"
+              >
+                <h5 class="card-title text-white fw-bold fs-1 mt-5 mb-2">Actividades</h5>
+                <ul>
+                  <li class="text-white text-start">Paseo por el río sinú</li>
+                  <li class="text-white text-start">Recorrido parque ronda del sinú</li>
+                  <li class="text-white text-start">Media Maratón de Montería</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-6" style="background-image: url('https://www.korraleja.co/2015/wp-content/uploads/2015/11/tumblr_nv215nrIMS1u8l6ypo1_500.jpg');"></div>
+        
+        <div 
+          class="col-6"
+          [ngClass]="{
+            'bg-img-gastronomy': item === 'gastronomy',
+            'bg-img-holidays': item === 'holidays',
+            'bg-img-activities': item === 'activities'
+          }"
+        ></div>
       </div>
 
       <div class="row h-sm-50 vh-sm-50 py-4 px-5">
@@ -84,12 +117,12 @@
               <div class="card-body">
                 <h5 class="card-title text-gastronomy fw-bold fs-1">¿Que visitar?</h5>
                 <ul>
-                  <li class="text-gastronomy text-start">Ronda del Sinu</li>
+                  <li class="text-gastronomy text-start">Ronda del Sinú</li>
                   <li class="text-gastronomy text-start">Catedral de Montería</li>
-                  <li class="text-gastronomy text-start">Villa Olimpica</li>
+                  <li class="text-gastronomy text-start">Villa Olímpica</li>
                   <li class="text-gastronomy text-start">Centro cultural</li>
-                  <li class="text-gastronomy text-start">Plaza Maria Varilla</li>
-                  <li class="text-gastronomy text-start">Rio Sinu</li>
+                  <li class="text-gastronomy text-start">Plaza María Varilla</li>
+                  <li class="text-gastronomy text-start">Río Sinú</li>
                 </ul>
               </div>
             </div>
